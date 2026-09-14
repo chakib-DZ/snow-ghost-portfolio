@@ -8,6 +8,7 @@ import RedGrain from "../components/RedGrain";
 export const metadata: Metadata = {
   title: "Chakib Makhlouf — Full-Stack & Game Developer | Snow Ghost Games",
   description: "Portfolio of Chakib Makhlouf: Godot, React/Next.js, 2D art. Home of Snow Ghost Games.",
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
