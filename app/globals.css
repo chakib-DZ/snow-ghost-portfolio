@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { background: #0A0A0B; color: #fff; overflow-x: hidden; font-size: 17px; line-height: 1.65; }
+::selection { background: #E30613; color: #fff; }
+
+/* Sharp angular cut — Persona / arcade vibe */
+.slash { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+.slash-sm { clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+.text-stroke { -webkit-text-stroke: 2px #fff; color: transparent; }
+.halftone {
+  background-image: radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+.diagonal-lines {
+  background-image: repeating-linear-gradient(-45deg, rgba(227,6,19,.9) 0 14px, transparent 14px 28px);
+}
+.card-hover { transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s, background .25s; }
+.card-hover:hover { transform: translate(-2px,-4px) scale(1.01); box-shadow: 6px 6px 0 #E30613, 0 8px 40px rgba(0,0,0,.6); }
+.btn-flip { transition: all .2s; }
+.btn-flip:hover { background: #fff !important; color: #0A0A0B !important; box-shadow: 4px 4px 0 #E30613; }
+.custom-cursor-dot, .custom-cursor-ring { position: fixed; pointer-events: none; z-index: 9999; }
+@media (pointer: coarse) { .custom-cursor-dot, .custom-cursor-ring { display: none; } }
