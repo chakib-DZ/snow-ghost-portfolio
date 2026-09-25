@@ -6,7 +6,7 @@ export default function Contact() {
       <SectionHeading kicker="Co-op mode" title="Contact" sub="Freelance, full-time, or jam — inbox respawns fast." />
       <div className="grid md:grid-cols-2 gap-5">
         <div className="space-y-3">
-          <a href="mailto:chakibchakib2001@gmail.com" className="slash block bg-charcoal border-l-4 border-crimson p-5 font-display hover:bg-crimson transition-colors">✉ CHAKIBCHAKIB2001@GMAIL.COM</a>
+          <a href="mailto:chakib.makhlouf.dev@gmail.com" className="slash block bg-charcoal border-l-4 border-crimson p-5 font-display hover:bg-crimson transition-colors">✉ CHAKIB.MAKHLOUF.DEV@GMAIL.COM</a>
           <div className="flex gap-3">
             <a href="https://github.com" className="slash flex-1 text-center border-2 border-white p-4 font-display hover:bg-white hover:text-pitch transition-all">GITHUB</a>
             <a href="https://linkedin.com" className="slash flex-1 text-center border-2 border-white p-4 font-display hover:bg-white hover:text-pitch transition-all">LINKEDIN</a>
