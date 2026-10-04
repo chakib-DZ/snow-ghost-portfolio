@@ -24,3 +24,9 @@ body { background: #0A0A0B; color: #fff; overflow-x: hidden; font-size: 17px; li
 .btn-flip:hover { background: #fff !important; color: #0A0A0B !important; box-shadow: 4px 4px 0 #E30613; }
 .custom-cursor-dot, .custom-cursor-ring { position: fixed; pointer-events: none; z-index: 9999; }
 @media (pointer: coarse) { .custom-cursor-dot, .custom-cursor-ring { display: none; } }
+
+/* News ticker — seamless right-to-left loop */
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-track { animation: ticker-scroll 22s linear infinite; will-change: transform; }
+.ticker-track:hover { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }

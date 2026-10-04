@@ -32,7 +32,10 @@ export default function Hero() {
         </motion.div>
       </div>
       <div className="mt-12 border-y-2 border-crimson py-3 overflow-hidden whitespace-nowrap font-display text-sm tracking-widest text-white/60">
-        GODOT 4 ◆ GDSCRIPT ◆ SPINE 2D ◆ REACT ◆ NEXT.JS ◆ NODE ◆ TAILWIND ◆ MONGODB ◆ CLIP STUDIO ◆&nbsp;
+        <div className="ticker-track inline-flex">
+          <span className="pr-2">GODOT 4 ◆ GDSCRIPT ◆ SPINE 2D ◆ REACT ◆ NEXT.JS ◆ NODE ◆ TAILWIND ◆ MONGODB ◆ CLIP STUDIO ◆&nbsp;</span>
+          <span className="pr-2" aria-hidden="true">GODOT 4 ◆ GDSCRIPT ◆ SPINE 2D ◆ REACT ◆ NEXT.JS ◆ NODE ◆ TAILWIND ◆ MONGODB ◆ CLIP STUDIO ◆&nbsp;</span>
+        </div>
       </div>
     </section>
   );

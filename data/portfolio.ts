@@ -13,8 +13,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { slug: "frostbite-platformer", title: "Frostbite — 2D Platformer Prototype", category: "Games", tagline: "Tight coyote-time controls, TileMap levels, Spine 2D ghost dash.", stack: ["Godot 4", "GDScript", "TileMaps", "Spine 2D"], year: "2025", accent: "#22D3EE", preview: "❄", link: "#" },
-  { slug: "ghost-dash", title: "Ghost Dash — Arcade Chaser", category: "Games", tagline: "Score-chaser with 2D physics, particles and frost trails.", stack: ["Godot", "GDScript", "2D Physics"], year: "2024", accent: "#7DD3FC", preview: "👻" },
+  { slug: "forgefall", title: "Forgefall — Arena Survivor", category: "Games", tagline: "Fast-paced top-down arena survivor: 20 waves, 9 weapons in 4 tiers, dash i-frames, final boss + endless mode.", stack: ["Godot 4", "GDScript", "HTML5", "itch.io"], year: "2026", accent: "#FB923C", preview: "⚒", link: "https://snow-ghost-games.itch.io/forgefall" },
   { slug: "fern-rope-tracker", title: "Fern & Rope — Jump Rope Tracker", category: "Web", tagline: "Nature-inspired interval timer with MET-based calories, weekly goals and streak tracking. 100% local-first.", stack: ["Next.js", "TypeScript", "Tailwind", "Local-first"], year: "2026", accent: "#4ADE80", preview: "🌿", link: "https://fern-and-rope.vercel.app/" },
   { slug: "dev-dashboard", title: "Pulse — Realtime Dashboard", category: "Web", tagline: "Socket-driven telemetry UI with charts and dark gaming theme.", stack: ["React", "Node.js", "Socket.io"], year: "2023", accent: "#34D399", preview: "⬢" },
   { slug: "sprite-pack", title: "Haunted Pines — Sprite Pack", category: "Art", tagline: "48-frame run cycle + tiles + VFX sheets. CSP + Krita.", stack: ["Clip Studio", "Krita", "Photoshop"], year: "2025", accent: "#F0ABFC", preview: "✦" },

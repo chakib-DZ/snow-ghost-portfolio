@@ -19,6 +19,15 @@ function FernRopeIcon() {
     </svg>
   );
 }
+function ForgefallIcon() {
+  return (
+    <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-label="Forgefall anvil and flame">
+      <path d="M32 8 C34.5 11 37 13.5 37 17 A5 5 0 0 1 27 17 C27 13.5 29.5 11 32 8 Z" stroke="#FB923C" strokeWidth="2.5" strokeLinejoin="round" />
+      <path d="M12 24 H52 V30 H38 L35 40 H29 L26 30 H12 Z" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
+      <path d="M22 45 H42 M24 49 H40" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
 export default function Showcase() {
   const [f, setF] = useState<Category>("All");
   const list = projects.filter(p => f === "All" || p.category === f);
@@ -33,8 +42,8 @@ export default function Showcase() {
       <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <AnimatePresence mode="popLayout">
           {list.map(p => (
-            <motion.a layout key={p.slug} href={p.link} initial={{opacity:0,x:-20}} animate={{opacity:1,x:0}} exit={{opacity:0,scale:.95}} whileHover={{scale:1.02}} className="card-hover group bg-charcoal border border-white/10 border-t-4 border-t-crimson p-5 block slash">
-              <div className="h-28 grid place-items-center text-5xl mb-4 bg-pitch border border-white/10 group-hover:bg-crimson transition-colors">{p.slug === "fern-rope-tracker" ? <FernRopeIcon /> : p.preview}</div>
+            <motion.a layout key={p.slug} href={p.link} target={p.link?.startsWith("http") ? "_blank" : undefined} rel={p.link?.startsWith("http") ? "noopener noreferrer" : undefined} initial={{opacity:0,x:-20}} animate={{opacity:1,x:0}} exit={{opacity:0,scale:.95}} whileHover={{scale:1.02}} className="card-hover group bg-charcoal border border-white/10 border-t-4 border-t-crimson p-5 block slash">
+              <div className="h-28 grid place-items-center text-5xl mb-4 bg-pitch border border-white/10 group-hover:bg-crimson transition-colors">{p.slug === "fern-rope-tracker" ? <FernRopeIcon /> : p.slug === "forgefall" ? <ForgefallIcon /> : p.preview}</div>
               <p className="text-[11px] font-display tracking-widest text-crimson">{p.category.toUpperCase()} · {p.year}</p>
               <h3 className="font-display mt-1 group-hover:text-crimson transition-colors uppercase text-sm leading-tight">{p.title}</h3>
               <p className="text-sm text-muted mt-1">{p.tagline}</p>
