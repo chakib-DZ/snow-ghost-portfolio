@@ -28,6 +28,15 @@ function ForgefallIcon() {
     </svg>
   );
 }
+function EyeIcon() {
+  return (
+    <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-label="Watching eye">
+      <path d="M8 32 C18 18 46 18 56 32 C46 46 18 46 8 32 Z" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
+      <circle cx="32" cy="32" r="9" stroke="#C084FC" strokeWidth="2.5" />
+      <circle cx="32" cy="32" r="3" fill="#C084FC" />
+    </svg>
+  );
+}
 export default function Showcase() {
   const [f, setF] = useState<Category>("All");
   const list = projects.filter(p => f === "All" || p.category === f);
@@ -43,7 +52,7 @@ export default function Showcase() {
         <AnimatePresence mode="popLayout">
           {list.map(p => (
             <motion.a layout key={p.slug} href={p.link} target={p.link?.startsWith("http") ? "_blank" : undefined} rel={p.link?.startsWith("http") ? "noopener noreferrer" : undefined} initial={{opacity:0,x:-20}} animate={{opacity:1,x:0}} exit={{opacity:0,scale:.95}} whileHover={{scale:1.02}} className="card-hover group bg-charcoal border border-white/10 border-t-4 border-t-crimson p-5 block slash">
-              <div className="h-28 grid place-items-center text-5xl mb-4 bg-pitch border border-white/10 group-hover:bg-crimson transition-colors">{p.slug === "fern-rope-tracker" ? <FernRopeIcon /> : p.slug === "forgefall" ? <ForgefallIcon /> : p.preview}</div>
+              <div className="h-28 grid place-items-center text-5xl mb-4 bg-pitch border border-white/10 group-hover:bg-crimson transition-colors">{p.slug === "fern-rope-tracker" ? <FernRopeIcon /> : p.slug === "forgefall" ? <ForgefallIcon /> : p.slug === "i-see-you" ? <EyeIcon /> : p.preview}</div>
               <p className="text-[11px] font-display tracking-widest text-crimson">{p.category.toUpperCase()} · {p.year}</p>
               <h3 className="font-display mt-1 group-hover:text-crimson transition-colors uppercase text-sm leading-tight">{p.title}</h3>
               <p className="text-sm text-muted mt-1">{p.tagline}</p>
