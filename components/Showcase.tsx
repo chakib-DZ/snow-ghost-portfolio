@@ -37,6 +37,15 @@ function EyeIcon() {
     </svg>
   );
 }
+function BellIcon() {
+  return (
+    <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-label="Dungeon bell">
+      <path d="M32 10 C22 10 18 22 18 32 L14 40 H50 L46 32 C46 22 42 10 32 10 Z" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
+      <circle cx="32" cy="44" r="3.5" fill="#7DD3FC" />
+      <path d="M10 26 C8 30 8 34 10 38 M54 26 C56 30 56 34 54 38" stroke="#7DD3FC" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
 export default function Showcase() {
   const [f, setF] = useState<Category>("All");
   const list = projects.filter(p => f === "All" || p.category === f);
@@ -52,7 +61,7 @@ export default function Showcase() {
         <AnimatePresence mode="popLayout">
           {list.map(p => (
             <motion.a layout key={p.slug} href={p.link} target={p.link?.startsWith("http") ? "_blank" : undefined} rel={p.link?.startsWith("http") ? "noopener noreferrer" : undefined} initial={{opacity:0,x:-20}} animate={{opacity:1,x:0}} exit={{opacity:0,scale:.95}} whileHover={{scale:1.02}} className="card-hover group bg-charcoal border border-white/10 border-t-4 border-t-crimson p-5 block slash">
-              <div className="h-28 grid place-items-center text-5xl mb-4 bg-pitch border border-white/10 group-hover:bg-crimson transition-colors">{p.slug === "fern-rope-tracker" ? <FernRopeIcon /> : p.slug === "forgefall" ? <ForgefallIcon /> : p.slug === "i-see-you" ? <EyeIcon /> : p.preview}</div>
+              <div className="h-28 grid place-items-center text-5xl mb-4 bg-pitch border border-white/10 group-hover:bg-crimson transition-colors">{p.slug === "fern-rope-tracker" ? <FernRopeIcon /> : p.slug === "forgefall" ? <ForgefallIcon /> : p.slug === "i-see-you" ? <EyeIcon /> : p.slug === "bell-of-the-deep" ? <BellIcon /> : p.preview}</div>
               <p className="text-[11px] font-display tracking-widest text-crimson">{p.category.toUpperCase()} · {p.year}</p>
               <h3 className="font-display mt-1 group-hover:text-crimson transition-colors uppercase text-sm leading-tight">{p.title}</h3>
               <p className="text-sm text-muted mt-1">{p.tagline}</p>
